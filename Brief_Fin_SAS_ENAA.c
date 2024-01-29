@@ -4,12 +4,18 @@ int taille = 0;
 struct Tache{
         char name[50];
         char description[50];
+        char date_d_echeance[50];
+        char priotite[50];
 };
 void ajouter(struct Tache task[]) {
     printf("Entrer le nom de la tache :\n");
-    scanf("%s", task[taille].name);    
-    printf("Entrer la description :\n");
-    scanf("%s", task[taille].description);
+    scanf(" %[^\n]", task[taille].name);    
+    printf("Entrer sa description :\n");
+    scanf(" %[^\n]", task[taille].description);
+    printf("Entrer la date d'echeance de cette tache :\n");
+    scanf(" %[^\n]", task[taille].date_d_echeance);    
+    printf("Entrer la priotite :\n");
+    scanf(" %[^\n]", task[taille].priotite);
     //while (getchar() != '\n');
     taille++;
 }
@@ -18,6 +24,9 @@ void afficher(struct Tache task[]){
     {
         printf("tache %d: %s \n",i + 1,task[i].name);
         printf("Sa description est : %s \n",task[i].description);
+        printf("Sa date d'echeance est : %s \n",task[i].date_d_echeance);
+        printf("Sa priotite est : %s \n",task[i].priotite);
+    
         printf("\n");
     }
 }
@@ -26,9 +35,13 @@ void modifier(struct Tache task[]){
     scanf("%d",&index);
     if(index >= 1 && index <= taille){
         printf("Entrer le nouveau nom : \n");
-        scanf("%s",task[index - 1].name);
+        scanf(" %[^\n]",task[index - 1].name);
         printf("Entrer la nouvelle description : \n");
-        scanf("%s",task[index - 1].description);
+        scanf(" %[^\n]",task[index - 1].description);
+        printf("Entrer la nouvelle date d'echeance de cette tache :\n");
+        scanf(" %[^\n]", task[taille].date_d_echeance);    
+        printf("Entrer la nouvelle priotite :\n");
+        scanf(" %[^\n]", task[taille].priotite);
     }
     else
     printf("choix invalid !");
