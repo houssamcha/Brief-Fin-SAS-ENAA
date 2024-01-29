@@ -33,6 +33,19 @@ void modifier(struct Tache task[]){
     else
     printf("choix invalid !");
 }
+void supprimer(struct Tache task[]){
+    printf("Quelle tache souhaitez-vous supprimer ?\n");
+    scanf("%d",&index);
+    for(int i = 0; i <= index ; i--){
+    if(index >= 1 && index <= taille){
+        task[index - 1] = task[index];
+        printf("supprime avec succes \n");
+        break;
+    }
+    else
+    printf("choix invalid !");
+    }
+}
 void menu(struct Tache task[]){
     int choix;
     do{
@@ -54,9 +67,12 @@ void menu(struct Tache task[]){
         case 3:
             modifier(task);
             break;
+        case 4:
+            supprimer(task);
+            break;
         case 5:
             printf("Au revoir !");
-            break; 
+            break;
         default:
             printf("Choix invalide. Entrer un choix entre 1 et 7!\n");
         }
