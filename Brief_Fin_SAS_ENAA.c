@@ -99,7 +99,7 @@ void filtrer(struct Tache task[]){
     printf("Resultats :\n");
     for(int i = 0; i < taille ; i++){
     if(task[i].priotite == choix){
-            printf("%s",task[i].name);
+            printf("%s \n",task[i].name);
         }
     }
 }
