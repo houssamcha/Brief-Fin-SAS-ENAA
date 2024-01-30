@@ -145,7 +145,7 @@ void menu(struct Tache task[]){
         default:
             printf("Choix invalide. Entrer un choix entre 1 et 7!\n");
         }
-    }while(choix != 5);
+    }while(choix != 8);
 }
 int main (){
     struct Tache task[50];
