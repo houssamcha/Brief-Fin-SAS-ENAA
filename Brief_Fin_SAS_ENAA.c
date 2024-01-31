@@ -30,7 +30,6 @@ void afficher(struct Tache task[]){
         printf("tache %d: %s \n",i + 1,task[i].name);
         printf("Sa description est : %s \n",task[i].description);
         printf("Sa date d'echeance est : %d/%d/%d \n", task[i].Date_d_echeance.day, task[i].Date_d_echeance.month, task[i].Date_d_echeance.year);
-        if(task)
         printf("Sa priotite est : %d \n",task[i].priotite);
         printf("\n");
     }
