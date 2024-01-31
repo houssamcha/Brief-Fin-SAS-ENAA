@@ -20,7 +20,7 @@ void ajouter(struct Tache task[]) {
         printf("Entrer sa date d'echeance :\n");
         scanf("%d/%d/%d", &task[taille].Date_d_echeance.day, &task[taille].Date_d_echeance.month, &task[taille].Date_d_echeance.year);   
         printf("Entrer la priotite (1 = Normal , 2 = Important) :\n");
-        scanf(" %d", &task[taille].priotite);
+        scanf("%d", &task[taille].priotite);
     //while (getchar() != '\n');
     taille++;
 }
@@ -44,9 +44,9 @@ void modifier(struct Tache task[]){
         printf("Entrer la nouvelle description : \n");
         scanf(" %[^\n]",task[numero - 1].description);
         printf("Entrer la nouvelle date d'echeance de cette tache :\n");
-        scanf(" %[^\n]", task[taille].Date_d_echeance.day, &task[taille].Date_d_echeance.month, &task[taille].Date_d_echeance.year);   
+        scanf("%d/%d/%d", &task[taille].Date_d_echeance.day, &task[taille].Date_d_echeance.month, &task[taille].Date_d_echeance.year);  
         printf("Entrer la nouvelle priotite (1 = Normal , 2 = Important) :\n");
-        scanf(" %d", &task[taille].priotite);
+        scanf("%d", &task[numero - 1].priotite);
     }
     else
     printf("choix invalid !");
